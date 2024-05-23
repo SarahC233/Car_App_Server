@@ -36,6 +36,11 @@ app.get("/health", (req, res) => {
   res.send("Server is running");
 });
 
+//Root URL endpoint
+app.get("/", (req, res) => {
+  res.send("Welcome to the Car Insurance Prediction API");
+});
+
 //Prediction endpoint
 app.post("/predict", upload.single("image"), async (req, res) => {
   //Sets up a POST route at the /predict endpoint that uses
